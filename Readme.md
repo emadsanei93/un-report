@@ -7,4 +7,5 @@ New results are going to be added. State tuned...
 About the graphs:
 
 Each point represents a country.
+
 Continents are grouped by color.
