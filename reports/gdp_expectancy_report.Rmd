@@ -1,0 +1,38 @@
+---
+title: "A UN Report on the Relationship between GPD and Life Expectancy"
+output: html_document
+date: "2023-12-14"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r packages}
+library(tidyverse)
+```
+
+This report was prepared to the attention of the United Nation.
+
+```{r data}
+gapminder_1997 <- read_csv("gapminder_1997.csv")
+```
+
+ggplot (gdpPercap, ;lifeExp, in points, color by continent, pop size by millions)
+
+```{r}
+ggplot(data=gapminder_1997) + 
+  aes(x=gdpPercap) +
+  labs(x = 'GDP Per Capita') +
+  aes(y = lifeExp) +
+  labs(y = "Life Expectancy") +
+  geom_point() +
+aes(color = continent) +
+  scale_color_brewer(palette = "Set2") +
+  aes(size = pop/1000000) +
+  labs(size = "Population (in millions)") +
+  aes(shape = continent)
+gapminder_1997
+```
+
